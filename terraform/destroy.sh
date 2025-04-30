@@ -3,7 +3,7 @@
 set -e
 
 # Lista de carpetas que se destruirán
-DIRS=("Efimero" "ElasticIP" "States")
+DIRS=("Efimero" "Persistente" "Estados")
 
 echo "This will destroy all managed infrastructure in: ${DIRS[*]}"
 echo -e "\nDo you really want to destroy all resources?"
