@@ -8,7 +8,7 @@ resource "aws_eip" "maineip" {
 terraform {
   backend "s3" {
     bucket = "terraform-state-bere"
-    key    = "ElasticIP/terraform.tfstate" 
+    key    = "Persistente/terraform.tfstate" 
     region = "us-east-2"
   }
   

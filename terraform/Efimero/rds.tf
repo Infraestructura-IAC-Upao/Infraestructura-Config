@@ -2,36 +2,29 @@
 resource "aws_db_subnet_group" "bere_db_subnet" {
   name        = "bere-db-subnet"
   description = "Subnets para la base de datos"
-  subnet_ids  = [aws_subnet.public_subnet-us-est-2a.id , aws_subnet.public_subnet-us-est-2b.id] # Subnet pública (se puede cambiar a privada si lo prefieres)
+  subnet_ids  = [local.subnet_2a, local.subnet_2b] 
 
   tags = {
     Name = "BereDatabaseSubnetGroup"
   }
 }
-data "terraform_remote_state" "vpc_id" {
-  backend = "s3"
-  config = {
-    bucket = "terraform-state-bere"
-    key    = "ElasticIP/terraform.tfstate"
-    region = "us-east-2"
-  }
-}
+
 resource "aws_security_group" "rds_sg" {
   name        = "rds_sg"
   description = "Allow DB access from backend EC2"
-  vpc_id = data.terraform_remote_state.vpc_id.outputs.VpcIP
+  vpc_id = "${local.vpc_id}"
   ingress {
     from_port       = 5432
     to_port         = 5432
     protocol        = "tcp"
-    security_groups = [aws_security_group.allow_ssh_http.id] # El SG de tu EC2
+    security_groups = [aws_security_group.allow_ssh_http.id] 
   }
 
     ingress {
     from_port       = 5432
     to_port         = 5432
     protocol        = "tcp"
-    cidr_blocks     = ["190.239.208.213/32"]  # Reemplaza <tu-ip-local> por la IP de tu máquina local
+    cidr_blocks     = ["190.239.208.213/32"]  
   }
 
   egress {
