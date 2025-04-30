@@ -8,11 +8,18 @@ resource "aws_db_subnet_group" "bere_db_subnet" {
     Name = "BereDatabaseSubnetGroup"
   }
 }
-
+data "terraform_remote_state" "vpc_id" {
+  backend = "s3"
+  config = {
+    bucket = "terraform-state-bere"
+    key    = "ElasticIP/terraform.tfstate"
+    region = "us-east-2"
+  }
+}
 resource "aws_security_group" "rds_sg" {
   name        = "rds_sg"
   description = "Allow DB access from backend EC2"
-  vpc_id = aws_vpc.main.id
+  vpc_id = data.terraform_remote_state.vpc_id.outputs.VpcIP
   ingress {
     from_port       = 5432
     to_port         = 5432
