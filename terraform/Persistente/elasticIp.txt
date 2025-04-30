@@ -1,2 +1,0 @@
-Elasticip.tf
-output.tf
