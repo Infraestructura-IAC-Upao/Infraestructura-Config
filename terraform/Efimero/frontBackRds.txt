@@ -1,5 +1,0 @@
-backend.tf
-front.tf
-output.tf
-rds.tf
-variables.tf
