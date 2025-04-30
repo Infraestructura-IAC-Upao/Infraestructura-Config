@@ -12,7 +12,7 @@ output "rds_connection_url" {
 # IP pública
 output "backend_public_ip" {
   description = "IP pública del backend"
-  value       = data.terraform_remote_state.elastic_ip.outputs.elasticIP
+  value       = "${local.eip}"
 }
 
 # DNS público
@@ -23,7 +23,7 @@ output "backend_public_dns" {
 
 output "backend_url" {
   description = "URL de acceso al backend"
-  value       = "http://${data.terraform_remote_state.elastic_ip.outputs.elasticIP}:8080"
+  value       = "http://${local.eip}:8080"
 }
 
 output "frontend_url" {

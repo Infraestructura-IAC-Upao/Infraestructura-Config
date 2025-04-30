@@ -11,3 +11,13 @@ output "VpcIP" {
   description = "vpcIP"
   value       = aws_vpc.main.id
 }
+
+output "aws_subnet_public_subnet-us-est-2a" {
+  description = "vpcIP"
+  value       = aws_subnet.public_subnet-us-est-2a.id
+}
+
+output "aws_subnet_public_subnet-us-est-2b" {
+  description = "vpcIP"
+  value       = aws_subnet.public_subnet-us-est-2b.id
+}

@@ -8,10 +8,11 @@ resource "aws_key_pair" "deployer" {
   public_key = file("/home/upao/.ssh/id_rsa.pub") 
 }
 
+
 resource "aws_security_group" "allow_ssh_http" {
   name        = "allow_ssh_http"
   description = "Allow SSH and 8080"
-  vpc_id = aws_vpc.main.id
+  vpc_id = "${local.vpc_id}"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -34,24 +35,19 @@ resource "aws_security_group" "allow_ssh_http" {
   }
 }
 
-data "terraform_remote_state" "elastic_ip" {
-  backend = "s3"
-  config = {
-    bucket = "terraform-state-bere"
-    key    = "ElasticIP/terraform.tfstate"
-    region = "us-east-2"
-  }
-}
+
 
 resource "aws_eip_association" "eip_assoc" {
   instance_id   = aws_instance.bere_backend.id
-  allocation_id = data.terraform_remote_state.elastic_ip.outputs.elastic_ip_allocation_id
+  allocation_id = "${local.eip}"
 }
+
+
 
 resource "aws_instance" "bere_backend" {
   ami                         = "ami-0100e595e1cc1ff7f" 
   instance_type               = "t2.micro"
-  subnet_id              = aws_subnet.public_subnet-us-est-2a.id
+  subnet_id                   = "${local.subnet_2a}"
   key_name                    = aws_key_pair.deployer.key_name
   vpc_security_group_ids      = [aws_security_group.allow_ssh_http.id]
   associate_public_ip_address = true
