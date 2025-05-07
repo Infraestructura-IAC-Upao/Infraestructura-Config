@@ -21,3 +21,8 @@ output "aws_subnet_public_subnet-us-est-2b" {
   description = "vpcIP"
   value       = aws_subnet.public_subnet-us-est-2b.id
 }
+
+output "url_front" {
+  description = "URL del frontend en CloudFront"
+  value       = "https://${aws_cloudfront_distribution.frontend_cf.domain_name}"
+}

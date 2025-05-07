@@ -21,13 +21,33 @@ output "backend_public_dns" {
   value       = aws_instance.bere_backend.public_dns
 }
 
-output "backend_url" {
-  description = "URL de acceso al backend"
-  value       = "http://${local.eip_ip}:8080"
+output "api_gateway_url" {
+  description = "URL pública del API Gateway"
+  value       = aws_apigatewayv2_stage.default.invoke_url
 }
 
 output "frontend_url" {
   description = "URL del frontent"
-  value = "http://bere-frontend.s3.${var.aws_region}.amazonaws.com/index.html"
+  value = local.front_url
   
+}
+
+output "api_gateway_id" {
+  value = aws_apigatewayv2_api.backend_api.id
+}
+
+output "api_gateway_endpoint" {
+  value = aws_apigatewayv2_api.backend_api.api_endpoint
+}
+
+output "api_gateway_stage" {
+  value = aws_apigatewayv2_stage.default.name
+}
+
+output "integration_uri" {
+  value = aws_apigatewayv2_integration.backend_integration.integration_uri
+}
+
+output "backend_eip" {
+  value = aws_eip_association.eip_assoc.public_ip
 }
