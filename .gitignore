@@ -25,3 +25,6 @@ secrets.tf
 .DS_Store
 Thumbs.db
 
+jenkins_rsa.pub
+.gitignore
+jenkins_rsa
