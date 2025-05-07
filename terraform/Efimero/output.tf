@@ -31,3 +31,23 @@ output "frontend_url" {
   value = local.front_url
   
 }
+
+output "api_gateway_id" {
+  value = aws_apigatewayv2_api.backend_api.id
+}
+
+output "api_gateway_endpoint" {
+  value = aws_apigatewayv2_api.backend_api.api_endpoint
+}
+
+output "api_gateway_stage" {
+  value = aws_apigatewayv2_stage.default.name
+}
+
+output "integration_uri" {
+  value = aws_apigatewayv2_integration.backend_integration.integration_uri
+}
+
+output "backend_eip" {
+  value = aws_eip_association.eip_assoc.public_ip
+}
