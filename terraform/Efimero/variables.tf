@@ -18,4 +18,5 @@ locals {
   eip_ip  = data.terraform_remote_state.Persistente.outputs.elasticIP
   subnet_2a = data.terraform_remote_state.Persistente.outputs.aws_subnet_public_subnet-us-est-2a
   subnet_2b = data.terraform_remote_state.Persistente.outputs.aws_subnet_public_subnet-us-est-2b
+  front_url = data.terraform_remote_state.Persistente.outputs.url_front
 }
