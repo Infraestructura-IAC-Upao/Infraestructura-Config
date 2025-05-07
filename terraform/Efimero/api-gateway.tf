@@ -7,7 +7,7 @@ resource "aws_apigatewayv2_api" "backend_api" {
         allow_headers     = ["Content-Type", "Authorization"]
         expose_headers    = ["*"]
         max_age           = 3600
-        allow_credentials = true
+        allow_credentials = false
     }
   depends_on = [aws_instance.bere_backend]
 }
