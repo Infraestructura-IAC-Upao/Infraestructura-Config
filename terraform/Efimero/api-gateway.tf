@@ -2,7 +2,7 @@ resource "aws_apigatewayv2_api" "backend_api" {
   name          = "BereBackendAPI"
   protocol_type = "HTTP"
   cors_configuration {
-        allow_origins     = ["https://d1l6zgkey4sk0l.cloudfront.net"]
+        allow_origins     = ["${local.front_url}"]
         allow_methods     = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
         allow_headers     = ["Content-Type", "Authorization"]
         expose_headers    = ["*"]
