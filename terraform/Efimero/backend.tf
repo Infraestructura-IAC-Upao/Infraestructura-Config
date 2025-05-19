@@ -62,17 +62,17 @@ resource "aws_instance" "bere_backend" {
 
               sudo dnf clean all
               sudo dnf makecache
-
+              
+              sudo dnf install -y git
               sudo dnf install -y docker
+              sudo dnf install java-21-amazon-corretto-devel -y
+              sudo dnf install -y maven
               sudo systemctl start docker
               sudo systemctl enable docker
 
               sudo docker pull govench/bere-api:latest
-              sudo docker run -d -p 8080:8080 --restart always govench/bere-api:latest
-
-              sudo dnf install postgresql17 -y
-
-              echo "Script completado"
+              sudo docker run -d --name bere-api -p 8080:8080 --restart always govench/bere-api:latest
+              
               EOF
 
   tags = {
