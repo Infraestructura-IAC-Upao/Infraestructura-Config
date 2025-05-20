@@ -50,11 +50,11 @@ resource "aws_db_instance" "bere_db" {
   vpc_security_group_ids  = [aws_security_group.rds_sg.id]
   db_subnet_group_name    = aws_db_subnet_group.bere_db_subnet.name
 
-  backup_retention_period = 0 # Desactiva backups para no salir del Free Tier
-  skip_final_snapshot     = true # Evita snapshot obligatorio al destruir
-  deletion_protection     = false # Puedes cambiar a true en producción
+  backup_retention_period = 0
+  skip_final_snapshot     = true 
+  deletion_protection     = false 
 
-  publicly_accessible     = false  #Activar para permitir local host
+  publicly_accessible     = false  
   multi_az                = false
 
   tags = {
