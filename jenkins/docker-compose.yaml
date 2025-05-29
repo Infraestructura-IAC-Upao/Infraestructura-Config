@@ -5,13 +5,34 @@ services:
     container_name: jenkins
     ports:
       - "8080:8080"
-      - "5000:5000"
+      - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/upao/.ssh/id_rsa:/home/upao/.ssh/id_rsa:ro
+      - ./jenkins.yaml:/var/jenkins_home/jenkins.yaml
     privileged: true
     environment:
       - JENKINS_URL=http://localhost:8080/
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/jenkins.yaml
+      - DOCKER_HOST=tcp://docker-agent:2375
+      - SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY}
+    networks:
+      - dev-net
+    group_add:
+      - 103
+
+  docker-agent:
+      image: docker:24.0.7-dind
+      container_name: docker-agent
+      privileged : true
+      networks:
+        - dev-net
+      ports:
+        - "2375:2375"
+      command: ["dockerd", "--host=tcp://0.0.0.0:2375", "--tls=false"]
+ 
 volumes:
   jenkins_home:
+networks:
+  dev-net:

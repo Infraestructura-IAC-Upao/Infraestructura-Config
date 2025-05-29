@@ -1,0 +1,53 @@
+jenkins:
+  securityRealm:
+    local: 
+      users: 
+        - id: "jaime"
+          name: "Jaime Code"
+          password: "upao"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+  clouds:
+    - docker: 
+        name: "Docker Agent"
+        dockerApi: 
+          dockerHost:
+            uri: "tcp://docker-agent:2375"
+        
+        templates:
+          - name: "agente-frontend"
+            labelString: "agente-frontend"
+            dockerTemplateBase:
+              image: "govench/agente-frontend:latest"
+              privileged: true
+            connector:
+              attach:
+                user: jenkins
+          
+          - name: "agente-aws"
+            labelString: "aws"
+            dockerTemplateBase:
+              image: "govench/agente-aws:latest"
+              privileged: true
+            nodeProperties:
+              - envVars:
+                  env:
+                    - key: SSH_PRIVATE_KEY
+                      value: "${SSH_PRIVATE_KEY}"
+            connector:
+              attach:
+                user: jenkins
+
+          - name: "agente-git"
+            labelString: "git"
+            dockerTemplateBase:
+              image: "jenkins/jnlp-agent-alpine"
+              privileged: true
+            connector:
+              attach:
+                user: jenkins
+
+
+
