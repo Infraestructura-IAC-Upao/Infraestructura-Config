@@ -13,6 +13,7 @@ override.tf.json
 # Ignore sensitive credentials
 credentials.tf
 secrets.tf
+jenkins/keys/
 
 # IDE/editor files
 .vscode/

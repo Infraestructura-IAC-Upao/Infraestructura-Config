@@ -16,6 +16,13 @@ RUN wget https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_am
     mv terraform /usr/local/bin/ && \
     rm terraform_1.6.6_linux_amd64.zip
 
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+
+COPY install-plugins.sh /usr/local/bin/install-plugins.sh
+
+RUN chmod +x /usr/local/bin/install-plugins.sh \
+    && install-plugins.sh
+    
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
