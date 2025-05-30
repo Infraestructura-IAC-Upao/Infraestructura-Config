@@ -51,3 +51,21 @@ output "integration_uri" {
 output "backend_eip" {
   value = aws_eip_association.eip_assoc.public_ip
 }
+
+output "id_backend_instance_1" {
+  value = aws_instance.bere_backend.id
+}
+
+output "id_backend_instance_2" {
+  value = aws_instance.bere_backend_2.id
+}
+
+output "lb-security-group-id" {
+  description = "Id del load balancer segurity group "
+  value = aws_security_group.sg-lb.id
+}
+
+output "lb-dns-name" {
+  description = "Dns del liad balancer"
+  value = aws_lb.main_lb.dns_name
+}

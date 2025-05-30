@@ -16,7 +16,7 @@ resource "aws_apigatewayv2_integration" "backend_integration" {
   api_id             = aws_apigatewayv2_api.backend_api.id
   integration_type   = "HTTP_PROXY"
   integration_method = "ANY"
-  integration_uri    = "http://${aws_eip_association.eip_assoc.public_ip}:8080/{proxy}"
+  integration_uri    = "http://${aws_lb.main_lb.dns_name}:/{proxy}"
 }
 
 resource "aws_apigatewayv2_route" "cors_options_route" {
