@@ -1,0 +1,409 @@
+[INFO] 2025-06-04 08:40:15 - Query executed - SELECT * FROM users - time: 80ms
+[ERROR] 2025-06-04 08:41:00 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:24:12 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 300ms
+[INFO] 2025-06-05 05:24:14 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 161ms
+[INFO] 2025-06-05 05:24:15 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 201ms
+[ERROR] 2025-06-05 05:24:17 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:24:18 - Query executed - SELECT * FROM users - time: 303ms
+[INFO] 2025-06-05 05:24:20 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 298ms
+[INFO] 2025-06-05 05:24:21 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 203ms
+[INFO] 2025-06-05 05:24:23 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 108ms
+[INFO] 2025-06-05 05:24:24 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 149ms
+[INFO] 2025-06-05 05:24:26 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 52ms
+[INFO] 2025-06-05 05:24:27 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 236ms
+[ERROR] 2025-06-05 05:24:29 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:24:30 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 101ms
+[INFO] 2025-06-05 05:24:32 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 137ms
+[INFO] 2025-06-05 05:24:33 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 265ms
+[INFO] 2025-06-05 05:24:35 - Query executed - SELECT * FROM users - time: 54ms
+[INFO] 2025-06-05 05:24:36 - Query executed - SELECT * FROM users - time: 297ms
+[INFO] 2025-06-05 05:24:38 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 251ms
+[INFO] 2025-06-05 05:24:40 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 175ms
+[INFO] 2025-06-05 05:24:41 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 215ms
+[INFO] 2025-06-05 05:24:43 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 22ms
+[INFO] 2025-06-05 05:24:44 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 232ms
+[ERROR] 2025-06-05 05:24:46 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:24:47 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 93ms
+[INFO] 2025-06-05 05:24:49 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 179ms
+[INFO] 2025-06-05 05:24:50 - Query executed - SELECT * FROM users - time: 265ms
+[INFO] 2025-06-05 05:24:52 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 49ms
+[ERROR] 2025-06-05 05:24:53 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:24:55 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 178ms
+[INFO] 2025-06-05 05:24:56 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 126ms
+[INFO] 2025-06-05 05:24:58 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 37ms
+[INFO] 2025-06-05 05:24:59 - Query executed - SELECT * FROM users - time: 48ms
+[INFO] 2025-06-05 05:25:01 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 138ms
+[INFO] 2025-06-05 05:25:02 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 113ms
+[INFO] 2025-06-05 05:25:04 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 91ms
+[ERROR] 2025-06-05 05:25:05 - Connection lost - reconnecting...
+[ERROR] 2025-06-05 05:25:07 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:25:08 - Query executed - SELECT * FROM users - time: 308ms
+[INFO] 2025-06-05 05:25:10 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 144ms
+[INFO] 2025-06-05 05:25:11 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 302ms
+[INFO] 2025-06-05 05:25:13 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 154ms
+[INFO] 2025-06-05 05:25:14 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 43ms
+[INFO] 2025-06-05 05:25:16 - Query executed - SELECT * FROM users - time: 32ms
+[INFO] 2025-06-05 05:25:17 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 283ms
+[INFO] 2025-06-05 05:25:19 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 179ms
+[INFO] 2025-06-05 05:25:20 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 192ms
+[INFO] 2025-06-05 05:25:22 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 252ms
+[ERROR] 2025-06-05 05:25:23 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:25:25 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 302ms
+[INFO] 2025-06-05 05:25:26 - Query executed - SELECT * FROM users - time: 156ms
+[INFO] 2025-06-05 05:25:28 - Query executed - SELECT * FROM users - time: 292ms
+[INFO] 2025-06-05 05:25:29 - Query executed - SELECT * FROM users - time: 44ms
+[INFO] 2025-06-05 05:25:31 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 49ms
+[INFO] 2025-06-05 05:25:32 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 247ms
+[INFO] 2025-06-05 05:25:34 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 60ms
+[INFO] 2025-06-05 05:25:35 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 103ms
+[INFO] 2025-06-05 05:25:37 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 244ms
+[INFO] 2025-06-05 05:25:38 - Query executed - SELECT * FROM users - time: 83ms
+[INFO] 2025-06-05 05:25:40 - Query executed - SELECT * FROM users - time: 245ms
+[INFO] 2025-06-05 05:25:41 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 46ms
+[INFO] 2025-06-05 05:25:43 - Query executed - SELECT * FROM users - time: 285ms
+[INFO] 2025-06-05 05:25:44 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 89ms
+[INFO] 2025-06-05 05:25:46 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 89ms
+[INFO] 2025-06-05 05:25:47 - Query executed - SELECT * FROM users - time: 62ms
+[INFO] 2025-06-05 05:25:49 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 24ms
+[INFO] 2025-06-05 05:25:50 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 212ms
+[INFO] 2025-06-05 05:25:52 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 138ms
+[ERROR] 2025-06-05 05:25:53 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:25:55 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 33ms
+[ERROR] 2025-06-05 05:25:56 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:25:58 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 218ms
+[INFO] 2025-06-05 05:25:59 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 82ms
+[INFO] 2025-06-05 05:26:01 - Query executed - SELECT * FROM users - time: 239ms
+[INFO] 2025-06-05 05:26:02 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 197ms
+[INFO] 2025-06-05 05:26:04 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 20ms
+[INFO] 2025-06-05 05:26:05 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 80ms
+[INFO] 2025-06-05 05:26:07 - Query executed - SELECT * FROM users - time: 34ms
+[INFO] 2025-06-05 05:26:08 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 270ms
+[INFO] 2025-06-05 05:26:10 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 145ms
+[INFO] 2025-06-05 05:26:11 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 151ms
+[ERROR] 2025-06-05 05:26:13 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:26:14 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 303ms
+[INFO] 2025-06-05 05:26:16 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 253ms
+[INFO] 2025-06-05 05:26:17 - Query executed - SELECT * FROM users - time: 41ms
+[INFO] 2025-06-05 05:26:19 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 230ms
+[INFO] 2025-06-05 05:26:20 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 237ms
+[INFO] 2025-06-05 05:26:22 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 223ms
+[INFO] 2025-06-05 05:26:23 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 89ms
+[INFO] 2025-06-05 05:26:25 - Query executed - SELECT * FROM users - time: 149ms
+[INFO] 2025-06-05 05:26:26 - Query executed - SELECT * FROM users - time: 296ms
+[INFO] 2025-06-05 05:26:28 - Query executed - SELECT * FROM users - time: 307ms
+[INFO] 2025-06-05 05:26:29 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 50ms
+[INFO] 2025-06-05 05:26:31 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 47ms
+[INFO] 2025-06-05 05:26:32 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 30ms
+[INFO] 2025-06-05 05:26:34 - Query executed - SELECT * FROM users - time: 112ms
+[INFO] 2025-06-05 05:26:35 - Query executed - SELECT * FROM users - time: 68ms
+[INFO] 2025-06-05 05:26:37 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 118ms
+[INFO] 2025-06-05 05:26:38 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 160ms
+[INFO] 2025-06-05 05:26:40 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 231ms
+[INFO] 2025-06-05 05:26:41 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 180ms
+[INFO] 2025-06-05 05:26:43 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 247ms
+[INFO] 2025-06-05 05:26:44 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 285ms
+[INFO] 2025-06-05 05:26:46 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 153ms
+[INFO] 2025-06-05 05:26:47 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 67ms
+[INFO] 2025-06-05 05:26:49 - Query executed - SELECT * FROM users - time: 52ms
+[ERROR] 2025-06-05 05:26:50 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:26:52 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 39ms
+[INFO] 2025-06-05 05:26:53 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 237ms
+[INFO] 2025-06-05 05:26:55 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 79ms
+[INFO] 2025-06-05 05:26:56 - Query executed - SELECT * FROM users - time: 141ms
+[INFO] 2025-06-05 05:26:58 - Query executed - SELECT * FROM users - time: 207ms
+[INFO] 2025-06-05 05:26:59 - Query executed - SELECT * FROM users - time: 299ms
+[INFO] 2025-06-05 05:27:01 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 231ms
+[INFO] 2025-06-05 05:27:02 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 80ms
+[INFO] 2025-06-05 05:27:04 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 96ms
+[INFO] 2025-06-05 05:27:05 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 298ms
+[INFO] 2025-06-05 05:27:07 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 127ms
+[INFO] 2025-06-05 05:27:08 - Query executed - SELECT * FROM users - time: 243ms
+[ERROR] 2025-06-05 05:27:10 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:27:11 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 61ms
+[ERROR] 2025-06-05 05:27:13 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:27:14 - Query executed - SELECT * FROM users - time: 260ms
+[INFO] 2025-06-05 05:27:16 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 82ms
+[ERROR] 2025-06-05 05:27:17 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:27:19 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 44ms
+[INFO] 2025-06-05 05:27:20 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 27ms
+[INFO] 2025-06-05 05:27:22 - Query executed - SELECT * FROM users - time: 77ms
+[INFO] 2025-06-05 05:27:23 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 85ms
+[INFO] 2025-06-05 05:27:25 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 214ms
+[INFO] 2025-06-05 05:27:26 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 171ms
+[INFO] 2025-06-05 05:27:28 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 190ms
+[INFO] 2025-06-05 05:27:29 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 250ms
+[INFO] 2025-06-05 05:27:31 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 277ms
+[INFO] 2025-06-05 05:27:32 - Query executed - SELECT * FROM users - time: 129ms
+[INFO] 2025-06-05 05:27:34 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 180ms
+[INFO] 2025-06-05 05:27:35 - Query executed - SELECT * FROM users - time: 216ms
+[INFO] 2025-06-05 05:27:37 - Query executed - SELECT * FROM users - time: 188ms
+[INFO] 2025-06-05 05:27:38 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 75ms
+[ERROR] 2025-06-05 05:27:40 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:27:41 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 278ms
+[INFO] 2025-06-05 05:27:43 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 261ms
+[INFO] 2025-06-05 05:27:44 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 77ms
+[INFO] 2025-06-05 05:27:46 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 114ms
+[ERROR] 2025-06-05 05:27:47 - Connection lost - reconnecting...
+[INFO] 2025-06-05 05:27:49 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 183ms
+[INFO] 2025-06-05 05:27:50 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 192ms
+[INFO] 2025-06-05 05:27:52 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 141ms
+[INFO] 2025-06-05 05:27:53 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 94ms
+[INFO] 2025-06-05 05:27:55 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 178ms
+[INFO] 2025-06-05 06:39:10 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 288ms
+[INFO] 2025-06-05 06:39:11 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 128ms
+[INFO] 2025-06-05 06:39:13 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 182ms
+[INFO] 2025-06-05 06:39:14 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 131ms
+[INFO] 2025-06-05 06:39:16 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 87ms
+[INFO] 2025-06-05 06:39:17 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 315ms
+[INFO] 2025-06-05 06:39:19 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 256ms
+[INFO] 2025-06-05 06:39:20 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 85ms
+[ERROR] 2025-06-05 06:39:22 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:39:23 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 277ms
+[INFO] 2025-06-05 06:39:25 - Query executed - SELECT * FROM users - time: 268ms
+[INFO] 2025-06-05 06:39:26 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 81ms
+[INFO] 2025-06-05 06:39:28 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 283ms
+[INFO] 2025-06-05 06:39:29 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 310ms
+[INFO] 2025-06-05 06:39:31 - Query executed - SELECT * FROM users - time: 149ms
+[INFO] 2025-06-05 06:39:32 - Query executed - SELECT * FROM users - time: 162ms
+[INFO] 2025-06-05 06:39:34 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 88ms
+[INFO] 2025-06-05 06:39:35 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 173ms
+[INFO] 2025-06-05 06:39:37 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 229ms
+[INFO] 2025-06-05 06:39:38 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 198ms
+[INFO] 2025-06-05 06:39:40 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 255ms
+[INFO] 2025-06-05 06:39:41 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 162ms
+[INFO] 2025-06-05 06:39:43 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 183ms
+[INFO] 2025-06-05 06:39:44 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 41ms
+[INFO] 2025-06-05 06:39:46 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 282ms
+[INFO] 2025-06-05 06:39:47 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 76ms
+[INFO] 2025-06-05 06:39:49 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 61ms
+[INFO] 2025-06-05 06:40:05 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 244ms
+[INFO] 2025-06-05 06:40:06 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 68ms
+[INFO] 2025-06-05 06:40:08 - Query executed - SELECT * FROM users - time: 315ms
+[INFO] 2025-06-05 06:40:09 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 37ms
+[INFO] 2025-06-05 06:40:11 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 257ms
+[INFO] 2025-06-05 06:40:12 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 125ms
+[INFO] 2025-06-05 06:40:14 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 70ms
+[INFO] 2025-06-05 06:40:15 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 76ms
+[INFO] 2025-06-05 06:40:17 - Query executed - SELECT * FROM users - time: 129ms
+[INFO] 2025-06-05 06:40:18 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 38ms
+[INFO] 2025-06-05 06:40:20 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 168ms
+[INFO] 2025-06-05 06:40:21 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 196ms
+[ERROR] 2025-06-05 06:40:23 - Connection lost - reconnecting...
+[ERROR] 2025-06-05 06:40:24 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:40:26 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 172ms
+[INFO] 2025-06-05 06:40:27 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 145ms
+[INFO] 2025-06-05 06:40:29 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 213ms
+[INFO] 2025-06-05 06:40:30 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 167ms
+[ERROR] 2025-06-05 06:40:32 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:40:33 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 164ms
+[INFO] 2025-06-05 06:40:35 - Query executed - SELECT * FROM users - time: 89ms
+[INFO] 2025-06-05 06:40:36 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 128ms
+[INFO] 2025-06-05 06:40:38 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 317ms
+[INFO] 2025-06-05 06:40:39 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 175ms
+[INFO] 2025-06-05 06:40:41 - Query executed - SELECT * FROM users - time: 161ms
+[ERROR] 2025-06-05 06:40:42 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:40:44 - Query executed - SELECT * FROM users - time: 202ms
+[INFO] 2025-06-05 06:40:45 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 22ms
+[INFO] 2025-06-05 06:40:47 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 104ms
+[INFO] 2025-06-05 06:40:48 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 85ms
+[INFO] 2025-06-05 06:40:50 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 188ms
+[INFO] 2025-06-05 06:40:51 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 60ms
+[INFO] 2025-06-05 06:40:53 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 252ms
+[INFO] 2025-06-05 06:40:54 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 314ms
+[ERROR] 2025-06-05 06:40:59 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:41:00 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 217ms
+[INFO] 2025-06-05 06:41:35 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 49ms
+[INFO] 2025-06-05 06:41:37 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 143ms
+[INFO] 2025-06-05 06:42:20 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 274ms
+[INFO] 2025-06-05 06:42:22 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 319ms
+[INFO] 2025-06-05 06:42:24 - Query executed - SELECT * FROM users - time: 37ms
+[INFO] 2025-06-05 06:42:50 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 73ms
+[INFO] 2025-06-05 06:42:51 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 279ms
+[INFO] 2025-06-05 06:42:53 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 139ms
+[INFO] 2025-06-05 06:42:54 - Query executed - SELECT * FROM users - time: 111ms
+[INFO] 2025-06-05 06:42:56 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 85ms
+[INFO] 2025-06-05 06:42:57 - Query executed - SELECT * FROM users - time: 136ms
+[INFO] 2025-06-05 06:42:59 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 31ms
+[INFO] 2025-06-05 06:43:00 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 293ms
+[INFO] 2025-06-05 06:43:02 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 222ms
+[INFO] 2025-06-05 06:43:03 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 66ms
+[INFO] 2025-06-05 06:43:05 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 259ms
+[INFO] 2025-06-05 06:43:06 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 54ms
+[ERROR] 2025-06-05 06:43:08 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:43:09 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 104ms
+[ERROR] 2025-06-05 06:43:11 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:43:12 - Query executed - SELECT * FROM users - time: 203ms
+[INFO] 2025-06-05 06:43:14 - Query executed - SELECT * FROM users - time: 242ms
+[INFO] 2025-06-05 06:43:15 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 40ms
+[INFO] 2025-06-05 06:43:17 - Query executed - SELECT * FROM users - time: 78ms
+[INFO] 2025-06-05 06:43:18 - Query executed - SELECT * FROM users - time: 121ms
+[INFO] 2025-06-05 06:43:20 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 230ms
+[INFO] 2025-06-05 06:43:21 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 308ms
+[INFO] 2025-06-05 06:43:23 - Query executed - SELECT * FROM users - time: 126ms
+[INFO] 2025-06-05 06:43:24 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 254ms
+[INFO] 2025-06-05 06:43:26 - Query executed - SELECT * FROM users - time: 130ms
+[INFO] 2025-06-05 06:43:28 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 117ms
+[ERROR] 2025-06-05 06:43:29 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:43:31 - Query executed - SELECT * FROM users - time: 246ms
+[INFO] 2025-06-05 06:43:32 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 56ms
+[INFO] 2025-06-05 06:43:34 - Query executed - SELECT * FROM users - time: 100ms
+[INFO] 2025-06-05 06:43:35 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 107ms
+[INFO] 2025-06-05 06:43:37 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 179ms
+[ERROR] 2025-06-05 06:43:38 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:43:40 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 123ms
+[INFO] 2025-06-05 06:44:21 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 48ms
+[INFO] 2025-06-05 06:44:22 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 266ms
+[INFO] 2025-06-05 06:44:24 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 78ms
+[ERROR] 2025-06-05 06:44:25 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:44:27 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 167ms
+[INFO] 2025-06-05 06:44:28 - Query executed - SELECT * FROM users - time: 188ms
+[INFO] 2025-06-05 06:44:30 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 210ms
+[INFO] 2025-06-05 06:44:31 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 152ms
+[INFO] 2025-06-05 06:44:33 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 219ms
+[INFO] 2025-06-05 06:44:34 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 131ms
+[INFO] 2025-06-05 06:44:36 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 313ms
+[INFO] 2025-06-05 06:44:37 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 82ms
+[INFO] 2025-06-05 06:44:39 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 212ms
+[INFO] 2025-06-05 06:44:40 - Query executed - SELECT * FROM users - time: 310ms
+[INFO] 2025-06-05 06:44:42 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 195ms
+[INFO] 2025-06-05 06:44:43 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 297ms
+[INFO] 2025-06-05 06:44:45 - Query executed - SELECT * FROM users - time: 206ms
+[INFO] 2025-06-05 06:44:46 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 221ms
+[INFO] 2025-06-05 06:44:48 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 48ms
+[INFO] 2025-06-05 06:44:49 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 298ms
+[INFO] 2025-06-05 06:44:51 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 234ms
+[INFO] 2025-06-05 06:44:52 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 261ms
+[INFO] 2025-06-05 06:44:54 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 123ms
+[INFO] 2025-06-05 06:44:55 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 119ms
+[INFO] 2025-06-05 06:44:57 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 200ms
+[INFO] 2025-06-05 06:44:58 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 288ms
+[INFO] 2025-06-05 06:45:31 - Query executed - SELECT * FROM users - time: 248ms
+[INFO] 2025-06-05 06:45:32 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 104ms
+[INFO] 2025-06-05 06:46:09 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 38ms
+[INFO] 2025-06-05 06:46:10 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 176ms
+[INFO] 2025-06-05 06:46:12 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 295ms
+[INFO] 2025-06-05 06:46:13 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 138ms
+[INFO] 2025-06-05 06:46:15 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 103ms
+[INFO] 2025-06-05 06:46:25 - Query executed - SELECT * FROM users - time: 223ms
+[INFO] 2025-06-05 06:46:27 - Query executed - SELECT * FROM users - time: 270ms
+[INFO] 2025-06-05 06:46:28 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 229ms
+[INFO] 2025-06-05 06:47:06 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 301ms
+[INFO] 2025-06-05 06:47:07 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 40ms
+[INFO] 2025-06-05 06:47:09 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 214ms
+[ERROR] 2025-06-05 06:47:10 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:47:12 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 273ms
+[INFO] 2025-06-05 06:47:13 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 61ms
+[ERROR] 2025-06-05 06:47:15 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:47:16 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 185ms
+[INFO] 2025-06-05 06:47:18 - Query executed - SELECT * FROM users - time: 288ms
+[INFO] 2025-06-05 06:47:19 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 70ms
+[INFO] 2025-06-05 06:47:21 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 67ms
+[INFO] 2025-06-05 06:47:22 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 55ms
+[INFO] 2025-06-05 06:47:24 - Query executed - SELECT * FROM users - time: 173ms
+[INFO] 2025-06-05 06:47:25 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 45ms
+[INFO] 2025-06-05 06:47:27 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 227ms
+[INFO] 2025-06-05 06:47:28 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 81ms
+[INFO] 2025-06-05 06:47:30 - Query executed - SELECT * FROM users - time: 73ms
+[INFO] 2025-06-05 06:47:31 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 251ms
+[INFO] 2025-06-05 06:47:33 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 285ms
+[INFO] 2025-06-05 06:47:34 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 44ms
+[INFO] 2025-06-05 06:47:36 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 112ms
+[INFO] 2025-06-05 06:47:37 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 298ms
+[INFO] 2025-06-05 06:47:39 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 104ms
+[INFO] 2025-06-05 06:47:40 - Query executed - SELECT * FROM users - time: 102ms
+[INFO] 2025-06-05 06:47:42 - Query executed - SELECT * FROM users - time: 125ms
+[INFO] 2025-06-05 06:47:43 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 145ms
+[ERROR] 2025-06-05 06:47:45 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:47:46 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 47ms
+[INFO] 2025-06-05 06:47:48 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 128ms
+[INFO] 2025-06-05 06:47:49 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 121ms
+[ERROR] 2025-06-05 06:47:51 - Connection lost - reconnecting...
+[ERROR] 2025-06-05 06:47:52 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:47:54 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 147ms
+[INFO] 2025-06-05 06:47:55 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 118ms
+[INFO] 2025-06-05 06:47:57 - Query executed - SELECT * FROM users - time: 168ms
+[INFO] 2025-06-05 06:47:58 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 184ms
+[INFO] 2025-06-05 06:48:00 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 119ms
+[INFO] 2025-06-05 06:48:01 - Query executed - SELECT * FROM users - time: 144ms
+[INFO] 2025-06-05 06:48:03 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 224ms
+[INFO] 2025-06-05 06:48:04 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 170ms
+[INFO] 2025-06-05 06:48:06 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 259ms
+[ERROR] 2025-06-05 06:48:07 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:48:09 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 45ms
+[INFO] 2025-06-05 06:48:10 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 228ms
+[INFO] 2025-06-05 06:48:12 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 111ms
+[INFO] 2025-06-05 06:48:13 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 188ms
+[INFO] 2025-06-05 06:48:15 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 158ms
+[INFO] 2025-06-05 06:48:16 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 157ms
+[INFO] 2025-06-05 06:48:18 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 205ms
+[INFO] 2025-06-05 06:48:19 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 92ms
+[INFO] 2025-06-05 06:48:21 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 37ms
+[INFO] 2025-06-05 06:48:22 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 94ms
+[INFO] 2025-06-05 06:48:24 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 98ms
+[INFO] 2025-06-05 06:48:25 - Query executed - SELECT * FROM users - time: 51ms
+[INFO] 2025-06-05 06:48:27 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 64ms
+[INFO] 2025-06-05 06:48:28 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 154ms
+[INFO] 2025-06-05 06:48:30 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 30ms
+[ERROR] 2025-06-05 06:48:31 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:48:33 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 193ms
+[INFO] 2025-06-05 06:48:34 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 156ms
+[ERROR] 2025-06-05 06:48:36 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:48:37 - Query executed - SELECT * FROM users - time: 167ms
+[INFO] 2025-06-05 06:48:39 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 61ms
+[INFO] 2025-06-05 06:48:40 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 75ms
+[INFO] 2025-06-05 06:48:42 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 255ms
+[INFO] 2025-06-05 06:48:43 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 106ms
+[ERROR] 2025-06-05 06:48:45 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:48:46 - Query executed - SELECT * FROM users - time: 29ms
+[INFO] 2025-06-05 06:48:48 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 113ms
+[ERROR] 2025-06-05 06:48:49 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:48:51 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 140ms
+[INFO] 2025-06-05 06:48:52 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 309ms
+[INFO] 2025-06-05 06:48:54 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 122ms
+[INFO] 2025-06-05 06:48:55 - Query executed - SELECT * FROM users - time: 117ms
+[INFO] 2025-06-05 06:48:57 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 244ms
+[INFO] 2025-06-05 06:48:58 - Query executed - SELECT * FROM users - time: 290ms
+[INFO] 2025-06-05 06:49:00 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 301ms
+[INFO] 2025-06-05 06:49:01 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 39ms
+[INFO] 2025-06-05 06:49:03 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 107ms
+[INFO] 2025-06-05 06:49:04 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 141ms
+[INFO] 2025-06-05 06:49:06 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 57ms
+[INFO] 2025-06-05 06:49:07 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 60ms
+[ERROR] 2025-06-05 06:49:09 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:49:10 - Query executed - SELECT * FROM users - time: 125ms
+[INFO] 2025-06-05 06:49:12 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 307ms
+[INFO] 2025-06-05 06:49:13 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 30ms
+[INFO] 2025-06-05 06:49:15 - Query executed - SELECT * FROM users - time: 23ms
+[INFO] 2025-06-05 06:49:16 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 173ms
+[INFO] 2025-06-05 06:49:18 - Query executed - SELECT * FROM users - time: 292ms
+[INFO] 2025-06-05 06:49:19 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 41ms
+[INFO] 2025-06-05 06:49:21 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 224ms
+[INFO] 2025-06-05 06:49:22 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 192ms
+[INFO] 2025-06-05 06:49:24 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 241ms
+[INFO] 2025-06-05 06:49:25 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 257ms
+[INFO] 2025-06-05 06:49:27 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 306ms
+[INFO] 2025-06-05 06:49:28 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 247ms
+[INFO] 2025-06-05 06:49:30 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 263ms
+[INFO] 2025-06-05 06:49:31 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 275ms
+[INFO] 2025-06-05 06:49:33 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 302ms
+[INFO] 2025-06-05 06:49:34 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 76ms
+[INFO] 2025-06-05 06:49:36 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 297ms
+[INFO] 2025-06-05 06:49:37 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 192ms
+[INFO] 2025-06-05 06:49:39 - Query executed - SELECT * FROM users - time: 102ms
+[INFO] 2025-06-05 06:49:40 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 87ms
+[INFO] 2025-06-05 06:49:42 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 205ms
+[INFO] 2025-06-05 06:49:43 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 298ms
+[INFO] 2025-06-05 06:49:45 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 262ms
+[INFO] 2025-06-05 06:49:46 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 60ms
+[INFO] 2025-06-05 06:49:48 - Query executed - INSERT INTO products (name, price) VALUES ("New Product", 9.99) - time: 40ms
+[INFO] 2025-06-05 06:49:49 - Query executed - DELETE FROM sessions WHERE expired=1 - time: 263ms
+[ERROR] 2025-06-05 06:49:51 - Connection lost - reconnecting...
+[INFO] 2025-06-05 06:49:52 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 242ms
+[INFO] 2025-06-05 06:49:54 - Query executed - SELECT * FROM users - time: 277ms
+[INFO] 2025-06-05 06:49:55 - Query executed - SELECT * FROM users - time: 158ms
+[INFO] 2025-06-05 06:49:57 - Query executed - SELECT * FROM users - time: 293ms
+[INFO] 2025-06-05 06:49:58 - Query executed - INSERT INTO provinces (name, location) VALUES ("Lima", "La Molina") - time: 184ms
+[INFO] 2025-06-05 06:50:00 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 166ms
+[INFO] 2025-06-05 06:50:01 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 191ms
+[INFO] 2025-06-05 06:50:03 - Query executed - SELECT * FROM users - time: 178ms
+[INFO] 2025-06-05 06:50:04 - Query executed - UPDATE orders SET status="shipped" WHERE id=123 - time: 275ms
