@@ -11,9 +11,9 @@ override.tf.json
 *_override.tf.json
 
 # Checkov results
-./terraform/results.xml/results_junitxml.xml
+results_junitxml.xml
 # Ignore sensitive credentials
-./terraform/Efimero/secrets.tf
+secrets/
 credentials.tf
 secrets.tf
 jenkins/keys/

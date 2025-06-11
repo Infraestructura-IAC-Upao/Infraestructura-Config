@@ -11,6 +11,23 @@ resource "aws_s3_bucket" "Bere_frontend" {
   }
 }
 
+resource "aws_s3_bucket_lifecycle_configuration" "bere_frontend_lifecycle" {
+  bucket = aws_s3_bucket.Bere_frontend.id
+
+  rule {
+    id     = "delete-old-objects"
+    status = "Enabled"
+
+    expiration {
+      days = 2
+    }
+
+    filter {
+      prefix = ""
+    }
+  }
+}
+
 resource "aws_s3_bucket_website_configuration" "frontend_website" {
   bucket = aws_s3_bucket.Bere_frontend.id
 
