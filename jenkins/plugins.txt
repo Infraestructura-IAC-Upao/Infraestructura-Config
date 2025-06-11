@@ -4,4 +4,3 @@ configuration-as-code
 generic-webhook-trigger
 docker-plugin
 docker-workflow
-aws-credentials

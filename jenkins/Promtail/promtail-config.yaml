@@ -1,0 +1,72 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: "api"
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: api
+          __path__: /var/log/app/app.log
+
+    pipeline_stages:
+      - regex:
+          expression: '\[(?P<level>[A-Z]+)\] (?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - (?P<method>GET|POST|PUT|DELETE) (?P<endpoint>[^ ]+) - status: (?P<status>\d+) - time: (?P<duration>\d+)ms'
+      - labels:
+          level:
+          status:
+          method:
+          endpoint:
+      - metrics:
+          request_duration_ms:
+            type: histogram
+            description: "Duración de las respuestas"
+            match_all: true
+            buckets: [50, 100, 200, 300, 500]
+            value: "{{ .duration }}"
+  - job_name : "dataBase"    
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: database
+          __path__: /var/log/app/dataBase.log
+    pipeline_stages:
+      - regex:
+          expression: '\[(?P<level>[A-Z]+)\] (?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - (?P<message>[^-]+)( - (?P<query_type>SELECT|INSERT|UPDATE|DELETE))?.*- time: (?P<duration>\d+)ms'
+      - labels:
+          level:
+          message:
+          query_type:
+      - metrics:
+          db_query_duration_ms:
+            type: histogram
+            description: "Duración de queries"
+            match_all: true
+            buckets: [20, 50, 100, 200, 500]
+            value: "{{ .duration }}"
+
+  - job_name : "login"    
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: login
+          __path__: /var/log/app/login.log
+    pipeline_stages:
+      - regex:
+          expression: '\[(?P<level>[A-Z]+)\] (?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - (?P<action>[^-]+) - user: (?P<user>[a-zA-Z0-9]+)( - ip: (?P<ip>[\d\.]+))?( - reason: (?P<reason>.+))?'
+      - labels:
+          level:
+          action:
+          user:
+          ip:
+          reason:
