@@ -27,8 +27,9 @@ resource "aws_lb" "main_lb" {
   internal = false
   load_balancer_type = "application"
   security_groups = [aws_security_group.sg-lb.id]
-
+  enable_deletion_protection = true
 }
+
 resource "aws_lb_target_group" "ec2_a" {
   name     = "tg-ec2-a"
   port     = 80
