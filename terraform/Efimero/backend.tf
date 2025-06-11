@@ -13,6 +13,7 @@ resource "aws_security_group" "allow_ssh_http" {
   name        = "allow_ssh_http"
   description = "Allow SSH and 8080"
   vpc_id = "${local.vpc_id}"
+
   ingress {
     from_port   = 22
     to_port     = 22

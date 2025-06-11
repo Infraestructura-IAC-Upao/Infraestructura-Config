@@ -8,6 +8,7 @@ resource "aws_security_group" "sg-lb" {
         to_port = 80
         protocol = "tcp"
         cidr_blocks = ["10.0.0.0/16"]
+        description = "Allow HTTP traffic from VPC CIDR"
     }
 
     egress {
@@ -15,6 +16,7 @@ resource "aws_security_group" "sg-lb" {
         from_port = 0
         to_port = 0
         cidr_blocks = ["0.0.0.0/0"]
+        description = "Allow all outbound traffic"
     }
   
 }
