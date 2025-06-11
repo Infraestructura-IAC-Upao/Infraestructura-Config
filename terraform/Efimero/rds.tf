@@ -43,8 +43,8 @@ resource "aws_db_instance" "bere_db" {
   allocated_storage       = 15
   storage_type            = "gp2"
   db_name                 = "restaurant"
-  username                = "restaurant_owner"
-  password                = "admin1234"
+  username                = var.db_username
+  password                = var.db_password
   port                    = 5432
 
   vpc_security_group_ids  = [aws_security_group.rds_sg.id]

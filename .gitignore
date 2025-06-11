@@ -10,7 +10,10 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
+# Checkov results
+./terraform/results.xml/results_junitxml.xml
 # Ignore sensitive credentials
+./terraform/Efimero/secrets.tf
 credentials.tf
 secrets.tf
 jenkins/keys/
@@ -25,7 +28,6 @@ jenkins/keys/
 # OS files
 .DS_Store
 Thumbs.db
-
 jenkins_rsa.pub
 .gitignore
 jenkins_rsa
