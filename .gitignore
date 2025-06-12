@@ -31,3 +31,6 @@ Thumbs.db
 jenkins_rsa.pub
 .gitignore
 jenkins_rsa
+
+#xml
+*.xml
