@@ -40,7 +40,17 @@ resource "aws_security_group" "allow_ssh_http" {
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+    description = "Allow outbound tcp traffic"
   }
+
+  egress {
+  from_port   = 5432
+  to_port     = 5432
+  protocol    = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+  description = "Allow outbound postgre traffic"
+  }
+
 }
 
 

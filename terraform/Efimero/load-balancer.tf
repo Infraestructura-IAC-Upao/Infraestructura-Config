@@ -7,8 +7,16 @@ resource "aws_security_group" "sg-lb" {
         from_port = 80
         to_port = 80
         protocol = "tcp"
-        cidr_blocks = ["10.0.0.0/16"]
+        cidr_blocks = ["0.0.0.0/0"]
         description = "Allow HTTP traffic from VPC CIDR"
+    }
+
+    ingress {
+        from_port = 8080
+        to_port = 8080
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+        description = "Allow HTTP traffic"
     }
 
     egress {
@@ -27,51 +35,51 @@ resource "aws_lb" "main_lb" {
   internal = false
   load_balancer_type = "application"
   security_groups = [aws_security_group.sg-lb.id]
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 }
 
 resource "aws_lb_target_group" "ec2_a" {
   name     = "tg-ec2-a"
-  port     = 80
+  port     = 8080
   protocol = "HTTP"
   vpc_id   = "${local.vpc_id}"
 
   health_check {
-    path                = "/"
+    path                = "/api/v1/auth/login"
     interval            = 30
     timeout             = 5
     healthy_threshold   = 2
     unhealthy_threshold = 2
-    matcher             = "200"
+    matcher             = "401"
   }
 }
 
 resource "aws_lb_target_group" "ec2_b" {
   name     = "tg-ec2-b"
-  port     = 80
+  port     = 8080
   protocol = "HTTP"
   vpc_id   = "${local.vpc_id}"
 
   health_check {
-    path                = "/"
+    path                = "/api/v1/auth/login"
     interval            = 30
     timeout             = 5
     healthy_threshold   = 2
     unhealthy_threshold = 2
-    matcher             = "200"
+    matcher             = "401"
   }
 }
 
 resource "aws_lb_target_group_attachment" "a1" {
   target_group_arn = aws_lb_target_group.ec2_a.arn
   target_id        = aws_instance.bere_backend.id
-  port             = 80
+  port             = 8080
 }
 
 resource "aws_lb_target_group_attachment" "b1" {
   target_group_arn = aws_lb_target_group.ec2_b.arn
   target_id        = aws_instance.bere_backend_2.id
-  port             = 80
+  port             = 8080
 }
 
 resource "aws_lb_listener" "front_end" {
