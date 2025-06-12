@@ -68,7 +68,26 @@ resource "aws_db_instance" "bere_db" {
   performance_insights_enabled      = true
   performance_insights_retention_period = 7
 
+  parameter_group_name              = aws_db_parameter_group.bere_db_pg.name
+
+
   tags = {
     Name = "BereRDS"
   }
 }
+
+resource "aws_db_parameter_group" "bere_db_pg" {
+  name   = "bere-db-params"
+  family = "postgres17"
+
+  parameter {
+    name  = "log_statement"
+    value = "all"
+  }
+
+  parameter {
+    name  = "log_min_duration_statement"
+    value = "0"
+  }
+}
+
