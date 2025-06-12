@@ -1,13 +1,20 @@
 resource "aws_s3_bucket" "Bere_frontend" {
   bucket         = "bere-frontend"
   force_destroy  = true
-
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
         sse_algorithm = "AES256"
       }
     }
+  }
+}
+
+resource "aws_s3_bucket_versioning" "bere_frontend_versioning" {
+  bucket = aws_s3_bucket.Bere_frontend.id
+
+  versioning_configuration {
+    status = "Enabled"
   }
 }
 
