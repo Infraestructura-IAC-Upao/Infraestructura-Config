@@ -13,6 +13,22 @@ resource "aws_s3_bucket_versioning" "versioning" {
     status = "Enabled"
   }
 }
+resource "aws_s3_bucket_lifecycle_configuration" "states_lifecycle" {
+  bucket = aws_s3_bucket.terraform_state.id
+
+  rule {
+    id     = "delete-old-objects"
+    status = "Enabled"
+
+    expiration {
+      days = 2
+    }
+
+    filter {
+      prefix = ""
+    }
+  }
+}
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
   bucket = aws_s3_bucket.terraform_state.id
