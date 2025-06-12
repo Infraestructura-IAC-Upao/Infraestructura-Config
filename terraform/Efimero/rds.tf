@@ -40,33 +40,34 @@ resource "aws_security_group" "rds_sg" {
 }
 
 resource "aws_db_instance" "bere_db" {
-  identifier              = "bere-db"
-  engine                  = "postgres"
-  engine_version          = "17.2" 
-  instance_class          = "db.t3.micro" 
-  allocated_storage       = 15
-  storage_type            = "gp2"
-  db_name                 = "restaurant"
-  username                = var.db_username
-  password                = var.db_password
-  port                    = 5432
+  identifier                        = "bere-db"
+  engine                            = "postgres"
+  engine_version                    = "17.2"
+  instance_class                    = "db.t3.micro"
+  allocated_storage                 = 15
+  storage_type                      = "gp2"
+  db_name                           = "restaurant"
+  username                          = var.db_username
+  password                          = var.db_password
+  port                              = 5432
 
-  vpc_security_group_ids  = [aws_security_group.rds_sg.id]
-  db_subnet_group_name    = aws_db_subnet_group.bere_db_subnet.name
+  vpc_security_group_ids            = [aws_security_group.rds_sg.id]
+  db_subnet_group_name              = aws_db_subnet_group.bere_db_subnet.name
 
-  backup_retention_period = 0
-  skip_final_snapshot     = true 
+  backup_retention_period           = 0
+  skip_final_snapshot               = true
   iam_database_authentication_enabled = true
-  deletion_protection     = false 
+  deletion_protection               = false
 
-  publicly_accessible     = false  
-  multi_az                = false
+  publicly_accessible               = false
+  multi_az                          = false
 
-  auto_minor_version_upgrade = true
-  
-  performance_insights_enabled = true
+  copy_tags_to_snapshot             = true
+  auto_minor_version_upgrade        = true
+
+  performance_insights_enabled      = true
   performance_insights_retention_period = 7
-  
+
   tags = {
     Name = "BereRDS"
   }
