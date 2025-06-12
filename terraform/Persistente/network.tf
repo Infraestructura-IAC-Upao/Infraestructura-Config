@@ -50,3 +50,14 @@ resource "aws_subnet" "public_subnet-us-est-2b" {
     Name = "Public Subnet us-east-2b"
   }
 }
+
+resource "aws_default_security_group" "restricted_default" {
+  vpc_id = aws_vpc.main.id
+  ingress = []
+  egress  = []
+  revoke_rules_on_delete = true
+
+  tags = {
+    Name = "restricted-default-sg"
+  }
+}
