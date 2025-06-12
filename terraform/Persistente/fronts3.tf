@@ -1,6 +1,7 @@
 resource "aws_s3_bucket" "Bere_frontend" {
   bucket         = "bere-frontend"
   force_destroy  = true
+  # checkov:skip=CKV2_AWS_62: No necesitamos eventos en este bucket por ahora
 }
 
 resource "aws_s3_bucket_versioning" "bere_frontend_versioning" {
