@@ -59,7 +59,9 @@ resource "aws_s3_bucket_policy" "frontend_bucket_policy" {
       {
         Sid       = "PublicReadGetObject"
         Effect    = "Allow"
-        Principal = "*"
+        Principal = {
+          AWS = aws_cloudfront_origin_access_identity.frontend_oai.iam_arn
+        }
         Action    = "s3:GetObject"
         Resource  = "${aws_s3_bucket.Bere_frontend.arn}/*"
       }
@@ -74,8 +76,8 @@ resource "aws_s3_bucket_policy" "frontend_bucket_policy" {
 resource "aws_s3_bucket_public_access_block" "bere_frontend_block" {
   bucket = aws_s3_bucket.Bere_frontend.id
 
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
 }
