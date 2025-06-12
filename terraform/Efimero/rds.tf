@@ -56,6 +56,7 @@ resource "aws_db_instance" "bere_db" {
 
   backup_retention_period = 0
   skip_final_snapshot     = true 
+  iam_database_authentication_enabled = true
   deletion_protection     = false 
 
   publicly_accessible     = false  
