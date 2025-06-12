@@ -4,8 +4,8 @@ resource "aws_s3_bucket" "terraform_state" {
   tags = {
     Name = "TerraformStateBucket"
   }
-  # checkov:skip=CKV_AWS_144: Bucket dedicado al backend de Terraform, replicación entre regiones no es necesaria
-
+  # checkov:skip=CKV_AWS_144: Bucket dedicado a los estados de Terraform, replicación entre regiones no es necesaria
+  # checkov:skip=CKV2_AWS_62: No necesitamos eventos en este bucket.
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
