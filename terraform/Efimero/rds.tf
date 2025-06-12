@@ -63,6 +63,9 @@ resource "aws_db_instance" "bere_db" {
 
   auto_minor_version_upgrade = true
   
+  performance_insights_enabled = true
+  performance_insights_retention_period = 1
+  
   tags = {
     Name = "BereRDS"
   }
