@@ -39,6 +39,8 @@ resource "aws_lb" "main_lb" {
 }
 
 resource "aws_lb_target_group" "ec2_a" {
+  # checkov:skip=CKV_AWS_378: Tráfico está cifrado por API Gateway; el ALB solo enruta tráfico HTTP interno
+
   name     = "tg-ec2-a"
   port     = 8080
   protocol = "HTTP"
@@ -55,6 +57,8 @@ resource "aws_lb_target_group" "ec2_a" {
 }
 
 resource "aws_lb_target_group" "ec2_b" {
+  # checkov:skip=CKV_AWS_378: Tráfico está cifrado por API Gateway; el ALB solo enruta tráfico HTTP interno
+
   name     = "tg-ec2-b"
   port     = 8080
   protocol = "HTTP"
