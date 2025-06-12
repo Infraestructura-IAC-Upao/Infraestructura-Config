@@ -61,6 +61,8 @@ resource "aws_db_instance" "bere_db" {
   publicly_accessible     = false  
   multi_az                = false
 
+  auto_minor_version_upgrade = true
+  
   tags = {
     Name = "BereRDS"
   }
