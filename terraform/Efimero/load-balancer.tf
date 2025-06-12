@@ -29,7 +29,9 @@ resource "aws_security_group" "sg-lb" {
   
 }
 
+# checkov:skip=CKV2_AWS_20: La redirección HTTP→HTTPS se gestiona externamente fuera del ALB
 resource "aws_lb" "main_lb" {
+
   name="main-lb"
   subnets = [local.subnet_2a,local.subnet_2b]
   internal = false
