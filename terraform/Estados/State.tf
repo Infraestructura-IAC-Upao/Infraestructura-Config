@@ -1,10 +1,11 @@
-
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "terraform-state-bere"
   force_destroy = true
   tags = {
     Name = "TerraformStateBucket"
   }
+  # checkov:skip=CKV_AWS_144: Bucket dedicado al backend de Terraform, replicación entre regiones no es necesaria
+
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
