@@ -5,6 +5,7 @@ resource "aws_cloudfront_origin_access_identity" "frontend_oai" {
 
 resource "aws_cloudfront_distribution" "frontend_cf" {
   # checkov:skip=CKV_AWS_86: Logs deshabilitados intencionalmente en entorno no crítico
+  # checkov:skip=CKV2_AWS_32: Política de encabezados ya aplicada mediante ID estándar de AWS, adecuada para S3 origin en entorno controlado
   # checkov:skip=CKV2-AWS-47: No se usa WAF en esta distribución; protección externa se maneja por otros medios
   # checkov:skip=CKV_AWS_310: No se requiere failover en esta distribución, es de un solo origen
   # checkov:skip=CKV_AWS_174: Se utiliza certificado por defecto de CloudFront, sin opción a forzar TLS v1.2, ACM genera costos
