@@ -1,4 +1,5 @@
 resource "aws_security_group" "sg-lb" {
+    # checkov:skip=CKV_AWS_382: Egress abierto permitido temporalmente en entorno de desarrollo para facilitar pruebas de conectividad
     name = "sg_lb"
     description = "Grupo de seguridad para el load balancer"
     vpc_id = local.vpc_id
