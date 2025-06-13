@@ -5,6 +5,7 @@ resource "aws_security_group" "sg-lb" {
     vpc_id = local.vpc_id
 
     ingress {
+       # checkov:skip=CKV_AWS_260: El acceso HTTP público (puerto 80) está habilitado temporalmente en entorno de desarrollo para pruebas con ALB
         from_port = 80
         to_port = 80
         protocol = "tcp"
