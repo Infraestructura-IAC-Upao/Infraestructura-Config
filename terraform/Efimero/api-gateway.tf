@@ -23,6 +23,7 @@ resource "aws_apigatewayv2_route" "cors_options_route" {
   api_id    = aws_apigatewayv2_api.backend_api.id
   route_key = "OPTIONS /{proxy+}"
   target    = "integrations/${aws_apigatewayv2_integration.backend_integration.id}"
+  authorization_type = "AWS_IAM"
 
   depends_on = [aws_apigatewayv2_integration.backend_integration]
 }
