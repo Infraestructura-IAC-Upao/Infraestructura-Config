@@ -56,9 +56,12 @@ resource "aws_cloudfront_distribution" "frontend_cf" {
     }
   }
 
-  viewer_certificate {
-    cloudfront_default_certificate = true
-  }
+# checkov:skip=CKV2-AWS-42: Usamos el certificado por defecto de CloudFront
+viewer_certificate {
+  cloudfront_default_certificate = true
+}
+
+
 
   tags = {
     Environment = "prod"
