@@ -38,6 +38,7 @@ resource "aws_apigatewayv2_route" "backend_route" {
 }
 
 resource "aws_apigatewayv2_stage" "default" {
+  # checkov:skip=CKV_AWS_76: Logging de acceso no es necesario en este entorno de desarrollo, lo cual evita costos innecesarios
   api_id      = aws_apigatewayv2_api.backend_api.id
   name        = "$default"
   auto_deploy = true
