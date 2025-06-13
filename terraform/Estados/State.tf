@@ -18,6 +18,7 @@ resource "aws_s3_bucket_versioning" "versioning" {
   }
 }
 resource "aws_s3_bucket_lifecycle_configuration" "states_lifecycle" {
+  # checkov:skip=CKV_AWS_300: No se agrega abort de multipart uploads ya que el bucket es usado solo por Terraform y no se esperan cargas incompletas
   bucket = aws_s3_bucket.terraform_state.id
 
   rule {
