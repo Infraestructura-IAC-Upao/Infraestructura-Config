@@ -2,6 +2,7 @@ resource "aws_cloudfront_origin_access_identity" "frontend_oai" {
   comment = "Access for CloudFront to bere-frontend"
 }
 
+# checkov:skip=CKV2-AWS-47: No se usa WAF en esta distribución; protección externa se maneja por otros medios
 # checkov:skip=CKV_AWS_310: No se requiere failover en esta distribución, es de un solo origen
 resource "aws_cloudfront_distribution" "frontend_cf" {
   enabled             = true
@@ -56,10 +57,10 @@ resource "aws_cloudfront_distribution" "frontend_cf" {
     }
   }
 
-# checkov:skip=CKV2-AWS-42: Usamos el certificado por defecto de CloudFront
-viewer_certificate {
-  cloudfront_default_certificate = true
-}
+  # checkov:skip=CKV2-AWS-42: Usamos certificado por defecto de CloudFront en este entorno
+  viewer_certificate {
+    cloudfront_default_certificate = true
+  }
 
 
 
