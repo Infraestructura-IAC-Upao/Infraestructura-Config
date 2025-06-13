@@ -127,6 +127,10 @@ resource "aws_instance" "bere_backend_2" {
     http_endpoint = "enabled"
   }
 
+  root_block_device {
+    encrypted = true
+  }
+
   user_data = <<-EOF
               #!/bin/bash
               exec > /var/log/user-data.log 2>&1
