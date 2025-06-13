@@ -18,6 +18,7 @@ resource "aws_security_group" "allow_ssh_http" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+    description = "Allow SSH access from anywhere"
   }
 
   ingress {
@@ -25,6 +26,7 @@ resource "aws_security_group" "allow_ssh_http" {
     to_port     = 8080
     protocol    = "tcp"
     security_groups = [aws_security_group.sg-lb.id]
+    description = "Allow HTTP (port 8080) from load balancer"
   }
 
   egress {
