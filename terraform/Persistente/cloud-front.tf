@@ -50,7 +50,8 @@ resource "aws_cloudfront_distribution" "frontend_cf" {
 
   restrictions {
     geo_restriction {
-      restriction_type = "none"
+      restriction_type = "whitelist"
+      locations        = ["US", "PE"]
     }
   }
 
