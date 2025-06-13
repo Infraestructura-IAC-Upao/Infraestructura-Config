@@ -38,7 +38,7 @@ resource "aws_security_group" "rds_sg" {
     description = "Allow all outbound traffic"
   }
 }
-
+# checkov:skip=CKV_AWS_118 reason=No se requiere monitoreo mejorado en este entorno
 resource "aws_db_instance" "bere_db" {
   identifier                        = "bere-db"
   engine                            = "postgres"
