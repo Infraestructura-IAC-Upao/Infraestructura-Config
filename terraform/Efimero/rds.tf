@@ -42,6 +42,7 @@ resource "aws_security_group" "rds_sg" {
 
 resource "aws_db_instance" "bere_db" {
   # checkov:skip=CKV_AWS_118: No se requiere monitoreo mejorado en este entorno
+  # checkov:skip=CKV_AWS_129: Logs de RDS no habilitados en entorno de desarrollo para evitar costos de CloudWatch
   # checkov:skip=CKV_AWS_157: Entorno no requiere alta disponibilidad
   # checkov:skip=CKV_AWS_86: No se requiere logging en entorno no productivo
   # checkov:skip=CKV_AWS_354: En entorno de desarrollo no se requiere cifrado con CMK para Performance Insights
