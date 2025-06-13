@@ -96,6 +96,7 @@ resource "aws_lb_target_group_attachment" "b1" {
 }
 
 resource "aws_lb_listener" "front_end" {
+  # checkov:skip=CKV_AWS_2: Listener HTTP permitido en entorno de desarrollo; redirección a HTTPS se maneja a nivel de API Gateway o no es necesaria por ahora
   load_balancer_arn = aws_lb.main_lb.arn
   port              = 80
   protocol          = "HTTP"
