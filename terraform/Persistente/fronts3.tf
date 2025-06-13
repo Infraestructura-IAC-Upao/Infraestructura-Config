@@ -25,6 +25,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "bere_frontend_lifecycle" {
+  # checkov:skip=CKV_AWS_300: No se agrega abort de multipart uploads ya que el bucket es usado solo por Terraform y no se esperan cargas incompletas
   bucket = aws_s3_bucket.Bere_frontend.id
 
   rule {
