@@ -46,6 +46,7 @@ resource "aws_db_instance" "bere_db" {
   instance_class                    = "db.t3.micro"
   allocated_storage                 = 15
   storage_type                      = "gp2"
+  storage_encrypted                 = true
   db_name                           = "restaurant"
   username                          = var.db_username
   password                          = var.db_password
