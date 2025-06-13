@@ -116,6 +116,7 @@ resource "aws_instance" "bere_backend" {
 }
 
 resource "aws_instance" "bere_backend_2" {
+  # checkov:skip=CKV_AWS_126: El monitoreo detallado no es necesario en este entorno, evita costos adicionales
   ami                         = "ami-0100e595e1cc1ff7f" 
   instance_type               = "t2.micro"
   subnet_id                   = "${local.subnet_2a}"
