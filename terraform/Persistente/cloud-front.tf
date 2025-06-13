@@ -2,6 +2,7 @@ resource "aws_cloudfront_origin_access_identity" "frontend_oai" {
   comment = "Access for CloudFront to bere-frontend"
 }
 
+# checkov:skip=CKV_AWS_310: No se requiere failover en esta distribución, es de un solo origen
 resource "aws_cloudfront_distribution" "frontend_cf" {
   enabled             = true
   is_ipv6_enabled     = true
