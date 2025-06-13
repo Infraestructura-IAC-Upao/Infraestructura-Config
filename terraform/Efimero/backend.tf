@@ -73,6 +73,11 @@ resource "aws_instance" "bere_backend" {
   associate_public_ip_address = false
   ebs_optimized = true
 
+  metadata_options {
+    http_tokens = "required"
+    http_endpoint = "enabled"
+  }
+
   user_data = <<-EOF
               #!/bin/bash
               exec > /var/log/user-data.log 2>&1
