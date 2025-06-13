@@ -11,6 +11,7 @@ resource "aws_key_pair" "deployer" {
 
 resource "aws_security_group" "allow_ssh_http" {
   # checkov:skip=CKV_AWS_24: Acceso SSH público temporalmente habilitado por motivos de desarrollo y pruebas
+  # checkov:skip=CKV_AWS_126: El monitoreo detallado no es necesario en este entorno, evita costos adicionales
   name        = "allow_ssh_http"
   description = "Allow SSH and 8080"
   vpc_id = "${local.vpc_id}"
