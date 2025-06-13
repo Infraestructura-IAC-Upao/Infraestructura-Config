@@ -119,7 +119,8 @@ resource "aws_instance" "bere_backend_2" {
   subnet_id                   = "${local.subnet_2a}"
   key_name                    = aws_key_pair.deployer.key_name
   vpc_security_group_ids      = [aws_security_group.allow_ssh_http.id]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
+  ebs_optimized = true
 
   user_data = <<-EOF
               #!/bin/bash
