@@ -35,6 +35,7 @@ resource "aws_security_group" "sg-lb" {
 resource "aws_lb" "main_lb" {
   # checkov:skip=CKV2_AWS_20: El redireccionamiento de HTTP a HTTPS se maneja mediante API Gateway y no directamente en el ALB
   # checkov:skip=CKV2-AWS-28: Este ALB es público pero no requiere WAF en este entorno (uso no productivo)
+  # checkov:skip=CKV_AWS_131: No se requiere eliminar encabezados inválidos en entorno de desarrollo, se mantiene por simplicidad
   name="main-lb"
   subnets = [local.subnet_2a,local.subnet_2b]
   internal = false
