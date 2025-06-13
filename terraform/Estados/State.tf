@@ -6,6 +6,8 @@ resource "aws_s3_bucket" "terraform_state" {
   }
   # checkov:skip=CKV_AWS_144: Bucket dedicado a los estados de Terraform, replicación entre regiones no es necesaria
   # checkov:skip=CKV2_AWS_62: No necesitamos eventos en este bucket.
+  # checkov:skip=CKV_AWS_18: No se habilita el logging ya que genera costos adicionales y altera la arquitectura diseñada sin bucket de logs
+  
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
