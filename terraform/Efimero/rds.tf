@@ -40,6 +40,7 @@ resource "aws_security_group" "rds_sg" {
 }
 # checkov:skip=CKV_AWS_118 reason=No se requiere monitoreo mejorado en este entorno
 # checkov:skip=CKV_AWS_157 reason=Entorno no requiere alta disponibilidad
+# checkov:skip=CKV_AWS_86 reason=No se requiere logging en entorno no productivo
 resource "aws_db_instance" "bere_db" {
   identifier                        = "bere-db"
   engine                            = "postgres"
