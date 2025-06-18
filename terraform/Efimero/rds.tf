@@ -86,18 +86,18 @@ resource "aws_db_instance" "bere_db" {
 }
 
 resource "aws_db_parameter_group" "bere_db_pg" {
-  # checkov:skip=CKV2_AWS_69: El cifrado en tránsito no se fuerza en entorno de desarrollo, pero RDS permite conexiones SSL si el cliente lo requiere
+  # checkov:skip=CKV2_AWS_69: No se activa el cifrado en tránsito en este entorno porque podría aumentar ligeramente el uso de CPU en consultas, lo que podría impactar el costo en entornos de alta carga.
   name   = "bere-db-params"
   family = "postgres17"
 
   parameter {
     name  = "log_statement"
-    value = "all"
+    value = "none"
   }
 
   parameter {
     name  = "log_min_duration_statement"
-    value = "0"
+    value = "10"
   }
 }
 

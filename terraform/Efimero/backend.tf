@@ -102,6 +102,13 @@ resource "aws_instance" "bere_backend" {
               sudo systemctl start docker
               sudo systemctl enable docker
 
+              sudo mkdir -p /opt/bere-backend
+              cd /opt/bere-backend
+              sudo git clone -b iacdevelop https://github.com/DonaBere-Restaurant/Backend.git bere-api
+              cd bere-api
+              cd RestaurantBere-api/
+              sudo JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64 mvn clean package -DskipTests
+              
               sudo docker pull govench/bere-api:latest
               sudo docker run -d --name bere-api -p 8080:8080 --restart always govench/bere-api:latest
               
@@ -122,7 +129,7 @@ resource "aws_instance" "bere_backend_2" {
   subnet_id                   = "${local.subnet_2a}"
   key_name                    = aws_key_pair.deployer.key_name
   vpc_security_group_ids      = [aws_security_group.allow_ssh_http.id]
-  associate_public_ip_address = false
+  associate_public_ip_address = true
   ebs_optimized = true
 
   metadata_options {
@@ -152,6 +159,13 @@ resource "aws_instance" "bere_backend_2" {
               sudo systemctl start docker
               sudo systemctl enable docker
 
+              sudo mkdir -p /opt/bere-backend
+              cd /opt/bere-backend
+              sudo git clone -b iacdevelop https://github.com/DonaBere-Restaurant/Backend.git bere-api
+              cd bere-api
+              cd RestaurantBere-api/
+              sudo JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64 mvn clean package -DskipTests
+              
               sudo docker pull govench/bere-api:latest
               sudo docker run -d --name bere-api -p 8080:8080 --restart always govench/bere-api:latest
               

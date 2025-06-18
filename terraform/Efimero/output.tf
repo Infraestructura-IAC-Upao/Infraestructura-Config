@@ -11,15 +11,16 @@ output "rds_connection_url" {
 
 # IP pública
 output "backend_public_ip" {
-  description = "IP pública del backend"
+  description = "IP pública del backend 1"
   value       = "${local.eip_ip}"
 }
 
-# DNS público
-output "backend_public_dns" {
-  description = "DNS público del backend"
-  value       = aws_instance.bere_backend.public_dns
-}
+# IP pública
+output "backend_public_ip" {
+  description = "IP pública del backend 2"
+  value       = "${aws_instance.bere_backend_2.public_ip}"
+} 
+
 
 output "api_gateway_url" {
   description = "URL pública del API Gateway"
