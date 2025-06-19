@@ -16,7 +16,7 @@ output "backend_public_ip" {
 }
 
 # IP pública
-output "backend_public_ip" {
+output "backend_public_ip_2" {
   description = "IP pública del backend 2"
   value       = "${aws_instance.bere_backend_2.public_ip}"
 } 
