@@ -3,7 +3,7 @@ FROM jenkins/jenkins:lts
 USER root
 
 RUN apt-get update && \
-    apt-get install -y docker.io awscli curl gnupg unzip wget
+    apt-get install -y docker.io awscli curl gnupg unzip wget python3-full pip 
 
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs
@@ -16,10 +16,10 @@ RUN wget https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_am
     mv terraform /usr/local/bin/ && \
     rm terraform_1.6.6_linux_amd64.zip
 
+RUN pip3 install checkov --break-system-packages
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
-
 RUN chmod +x /usr/local/bin/install-plugins.sh \
     && install-plugins.sh
     
