@@ -121,7 +121,7 @@ resource "aws_instance" "bere_backend" {
   iam_instance_profile = aws_iam_instance_profile.ec2_instance_profile.name
 
 }
-
+#Probando webhook
 resource "aws_instance" "bere_backend_2" {
   # checkov:skip=CKV_AWS_126: El monitoreo detallado no es necesario en este entorno, evita costos adicionales
   ami                         = "ami-0100e595e1cc1ff7f" 
