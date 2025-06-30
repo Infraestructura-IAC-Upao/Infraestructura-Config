@@ -8,7 +8,7 @@ resource "aws_key_pair" "deployer" {
   public_key = file("/home/upao/.ssh/id_rsa.pub") 
 }
 
-
+#Probando pipeline
 resource "aws_security_group" "allow_ssh_http" {
   # checkov:skip=CKV_AWS_24: Acceso SSH público temporalmente habilitado por motivos de desarrollo y pruebas
   name        = "allow_ssh_http"
